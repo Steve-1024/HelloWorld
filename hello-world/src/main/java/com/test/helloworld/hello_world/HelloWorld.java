@@ -6,13 +6,21 @@ package com.test.helloworld.hello_world;
  */
 public class HelloWorld 
 {
-	public String sayHello() 
+	public static void sayHello()
 	{
-		return "Hello World!";
+		try
+		{
+			System.out.print("This is try!");
+			return ;
+		}
+		finally
+		{
+			System.out.print("This is finally!");
+		}
 	}
 
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-		System.out.println(new HelloWorld().sayHello());
+		sayHello();
 	}
 }
